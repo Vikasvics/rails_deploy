@@ -64,13 +64,13 @@ set :user, "deploy"
 set :stage, :production
 set :branch, :master
 set :deploy_to, "/u01/apps/qwinix/rails_deploy"
-role :app, %w{deploy@35.154.95.26
+role :app, %w{deploy@15.206.81.29
 }
-role :web, %w{deploy@35.154.95.26
+role :web, %w{deploy@15.206.81.29
 }
-role :db, %w{deploy@35.154.95.26
+role :db, %w{deploy@15.206.81.29
 }
-server '35.154.95.26
+server '15.206.81.29
 ', roles: %w{:web, :app, :db}, user: 'deploy'
 #before "deploy", "puma:create_puma_bind_file_for_production"
 #after "deploy", "db:migrate_for_production"
